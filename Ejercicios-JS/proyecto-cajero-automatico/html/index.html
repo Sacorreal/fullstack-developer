@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>BANCO SACAPLATA</title>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Hola, bienvenido a tu Banco Sacaplata</h5>
+        <p class="card-text">
+          Para poder hacer retiros y consignaciones escoge una cuenta de usuario
+          e ingresa las credenciales
+        </p>
+      </div>
+      <img src="..." class="card-img-bottom" alt="..." />
+    </div>
+    <!-- Tabla con datos -->
+    <h1 class="text-center">Nuestros Clientes</h1>
+    <hr>
+    <table class="table table table-hover text-center">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col">Saldo</th>
+          <th scope="col">VER</th>
+          <th scope="col">OCULTAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>MARK</td>
+          <td id="password1">****</td>
+          <td id="balance1">****</td>
+          <td><button type="button" class="btn" id="show-credentials1">😛</button></td>
+          <td><button type="button" class="btn" id="hide-credentials1">😝</button></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>JACOB</td>
+          <td>8574</td>
+          <td>$100</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>PETER</td>
+          <td>0598</td>
+          <td>$690</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <!-- login -->
+    <h2 class="text-center">Ingresa a tu banco</h2>
+    <div class="row g-3">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Nombre" id="name" aria-label="First name">
+      </div>
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Contraseña" aria-label="Last name" id="password">
+      </div>
+      <button type="button" class="btn btn-success btn-sm col-2" id="btnLogin">Ingresar</button>
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
