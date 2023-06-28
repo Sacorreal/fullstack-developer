@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <title>Jacob</title>
-</head>
-<body>
-    <p>JACOB</p>
-</body>
+  </head>
+  <body>
+    <div class="card" style="width: 18rem">
+      <img src="../css/jacob.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">
+          Hola Jacob, bienvenido a tu banco tienes de saldo
+          <strong><span id="balance">$100</span></strong>
+        </p>
+      </div>
+    </div>
+    <!-- Acciones -->
+    <div class="col g-3 my-3">      
+      <div class="col">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="ingresa el valor a depositar"
+          aria-label="Last name"
+          id="password"
+        />
+      </div>
+      <button type="button" class="btn btn-success btn-sm col-2" id="deposit">
+        Consignar
+      </button>
+      <div class="row my-3">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="¿Cuanto quieres retirar?"          
+          id="password"
+        />
+      </div>
+      <button type="button" class="btn btn-danger btn-sm col-2" id="deposit">
+        Retirar
+      </button>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/jacob.js"></script>
+  </body>
 </html>
