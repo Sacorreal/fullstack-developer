@@ -50,7 +50,7 @@ btnLogin.addEventListener("click", function(){
     const inputPassword = document.getElementById("password"); 
     const userPassword = Number(inputPassword.value); 
     
-    if (userName == user1.name){        
+    if (userName == user1.name && userPassword == user1.password ){        
         alert ("haz ingresado los datos correctos reenviar a pagina registro")
     }else{
         alert("datos incorrectos")
