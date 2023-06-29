@@ -13,40 +13,68 @@
     <title>Jacob</title>
   </head>
   <body>
-    <div class="card" style="width: 18rem">
-      <img src="../css/jacob.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          Hola Jacob, bienvenido a tu banco tienes de saldo
-          <strong><span id="balance">$100</span></strong>
-        </p>
+    <!-- container principal -->
+    <div class="container">
+      <!-- card usuario inicio -->
+      <div class="row">
+        <div class="card my-3" style="width: 18rem">
+          <img src="../css/jacob.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Hola Jacob, bienvenido a tu banco tu saldo es :
+              <strong>$<span id="balance">100</span></strong>
+            </p>
+          </div>
+          
+        </div>
+        
+        <!-- card usuario final -->
+
+        <!-- Acciones inicio -->
+        <div class="col g-3 my-3">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="ingresa el valor a depositar"            
+            id="value-deposit"
+          />
+
+          <button
+            type="button"
+            class="btn btn-success btn-sm col-2 my-2"
+            id="deposit"
+          >
+            Consignar
+          </button>
+          <div class="row  my-3">
+            <input
+              type="number"
+              class="form-control "
+              placeholder="¿Cuanto quieres retirar?"
+              id="XXXXXX"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-warning btn-sm col-2"
+            id="XXXXX"
+          >
+            Retirar
+          </button>
+
+          <!-- Notificaciones -->
+          
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          
+        </div>
       </div>
-    </div>
-    <!-- Acciones -->
-    <div class="col g-3 my-3">      
-      <div class="col">
-        <input
-          type="number"
-          class="form-control"
-          placeholder="ingresa el valor a depositar"
-          aria-label="Last name"
-          id="password"
-        />
-      </div>
-      <button type="button" class="btn btn-success btn-sm col-2" id="deposit">
-        Consignar
-      </button>
-      <div class="row my-3">
-        <input
-          type="number"
-          class="form-control"
-          placeholder="¿Cuanto quieres retirar?"          
-          id="password"
-        />
-      </div>
-      <button type="button" class="btn btn-danger btn-sm col-2" id="deposit">
-        Retirar
-      </button>
+      <!-- Acciones final -->
+     
+        <button class="btn btn-danger btn-sm" type="button" id="btn-close">Cerrar sesión</button>
+      
     </div>
 
     <!-- bootstrap -->

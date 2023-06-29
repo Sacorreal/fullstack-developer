@@ -69,32 +69,8 @@ btnLogin.addEventListener("click", function () {
   const inputName = document.getElementById("name");
   const userName = inputName.value.toUpperCase();
 
-<<<<<<< HEAD
-const btnLogin = document.getElementById("btnLogin")
-
-btnLogin.addEventListener("click", function(){
-    const inputName = document.getElementById("name"); 
-    const userName = inputName.value.toUpperCase();
-
-    const inputPassword = document.getElementById("password"); 
-    const userPassword = Number(inputPassword.value); 
-    
-    if (userName == user1.name && userPassword == user1.password ){        
-        alert ("haz ingresado los datos correctos reenviar a pagina registro")
-    }else{
-        alert("datos incorrectos")
-    }
-
-    
-})
-
-
-
-// validar los datos para acceder al login
-=======
   const inputPassword = document.getElementById("password");
   const userPassword = Number(inputPassword.value);
->>>>>>> b8fff4b1c1eb81532626b5ebf3668e39ede162d1
 
   function user1Validator() {
     alert(`Bienvenido a tu banco ${user1.name}!`);
