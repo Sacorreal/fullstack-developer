@@ -18,7 +18,8 @@
       <img src="../css/jacob.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <p class="card-text">
-          Hola Jacob, bienvenido a tu banco tienes de saldo $<strong id="current-balance">100</strong>
+          Hola Jacob, bienvenido a tu banco tienes de saldo
+          <strong><span id="balance">$100</span></strong>
         </p>
       </div>
     </div>
@@ -29,7 +30,8 @@
           type="number"
           class="form-control"
           placeholder="ingresa el valor a depositar"
-          id="user-deposit"
+          aria-label="Last name"
+          id="password"
         />
       </div>
       <button type="button" class="btn btn-success btn-sm col-2" id="deposit">
@@ -40,10 +42,10 @@
           type="number"
           class="form-control"
           placeholder="¿Cuanto quieres retirar?"          
-          id="retiro"
+          id="password"
         />
       </div>
-      <button type="button" class="btn btn-danger btn-sm col-2" id="retirar">
+      <button type="button" class="btn btn-danger btn-sm col-2" id="deposit">
         Retirar
       </button>
     </div>
