@@ -16,9 +16,14 @@ let totalBalance = initialBalance;
 
 function depositarSaldo(){
     const valueUser = Number(userDeposit.value);
-    // validación => 
-    totalBalance += valueUser       
-    currentBalance.textContent = totalBalance    
+    
+    totalBalance += valueUser    
+    if(totalBalance <= limitBalance){
+        currentBalance.textContent = totalBalance  
+    }   
+      else{
+        alert("Te pasaste del monto máx permitido")
+      }
 }
 
 //depositar
@@ -30,9 +35,14 @@ retirar.addEventListener("click", function(){
     const currentBalance = document.getElementById("current-balance")
     let cbActually = Number(currentBalance.textContent)
     const valorRetiro = Number(retiro.value)
-     // validaciones
+    console.log(cbActually)
+    if(cbActually > 10){
     cbActually-= valorRetiro
     currentBalance.textContent = cbActually
+    }
+    else {
+        alert("no puedes sacar más de lo permitido")
+    }    
         
 })
 
