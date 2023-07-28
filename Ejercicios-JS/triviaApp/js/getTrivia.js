@@ -5,8 +5,10 @@ const getTrivia = async(difficulty, typeResponse, category) =>{
     const arrayTrivia = data.results;      
     if(typeResponse == "multiple"){
         alert("Escogiste multiple")
+        console.log(arrayTrivia)
     }else{
         triviaBoolean(arrayTrivia)
+        console.log(arrayTrivia)
     }   
 }; 
 
