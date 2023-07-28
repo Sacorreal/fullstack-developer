@@ -1,18 +1,19 @@
-const selectCategory = `https://opentdb.com/api_category.php`; 
+const API_CATEGORIES = `https://opentdb.com/api_category.php`; 
+const optionsCategories = document.getElementById("list-categories");
 
 
-const listCategories = async() => {
-    //const optionsCategories = document.getElementById("list-categories");
-    const response = await fetch(selectCategory); 
+const listCategories = async() => {    
+    const response = await fetch(API_CATEGORIES); 
     const data = await response.json(); 
-    const triviaCategories = data.trivia_categories;     
-    for (let i = 0; i < triviaCategories.length; i++) {      
-        
-        categoriesOption.innerHTML = `<option value="${triviaCategories[i].id}">${triviaCategories[i].name}`;
-        optionsCategories.appendChild(categoriesOption)
+    const triviaCategories = data.trivia_categories; 
 
+    for (let i = 0; i < triviaCategories.length; i++) {
+        const optionCategories =document.createElement("option");
+        optionCategories.value = `${triviaCategories[i].id}`;
+        optionCategories.innerHTML = `${triviaCategories[i].name}`;       
+        optionsCategories.appendChild(optionCategories)
     }  
-    console.log(triviaCategories[9].name)    
+        
 }
 
 listCategories();
