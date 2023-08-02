@@ -45,7 +45,7 @@ const getTrivia = async(difficulty, typeResponse, category) =>{
                 
             }
             alert(`Tu puntaje es ${scoreUser}`)
-            //reiniciar el juego
+            window.location.reload(); 
             
         
         })
