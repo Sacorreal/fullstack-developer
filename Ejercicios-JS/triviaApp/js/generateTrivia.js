@@ -10,13 +10,25 @@ const getTrivia = async(difficulty, typeResponse, category) =>{
 
     if(typeResponse == "multiple")
     {
-     //funcion para multiple        
+        console.log(arrayTrivia)
+
+        for (let i = 0; i < arrayTrivia.length; i++) {
+            const triviaList = document.createElement("div"); 
+            triviaList.innerHTML = `<label for="" class="form-label">${arrayTrivia[i].question}</label>
+            <select class="form-select" id= ${i}>
+                <option value=""></option>                                                
+                <option value=""></option>
+                <option value=""></option>                
+              </select>`
+              formTrivia.appendChild(triviaList)            
+        }
+        
+
     }
-    // si es booleano haz esto => 
+    
     else{
         for (let i = 0; i < arrayTrivia.length; i++) {
             const triviaList = document.createElement("div");        
-            //triviaList.setAttribute("class","form")
             triviaList.innerHTML = `<label for="" class="form-label">${arrayTrivia[i].question}</label>
             <select class="form-select" id= ${i}>
                 <option value="any"></option>                                
@@ -26,8 +38,7 @@ const getTrivia = async(difficulty, typeResponse, category) =>{
               formTrivia.appendChild(triviaList)              
         }   
         btnSendTrivia.setAttribute("class", "btn btn-success btn-lg my-4");
-        console.log(arrayTrivia)
-
+        
         formTrivia.addEventListener("submit", e =>{
             e.preventDefault();
             const responseTrivia = []; 
@@ -38,10 +49,8 @@ const getTrivia = async(difficulty, typeResponse, category) =>{
             // fuera 
             let scoreUser = 0; 
             for (let i = 0; i < 10; i++) {
-                if (arrayTrivia[i].correct_answer == responseTrivia[i] ) {  
-                    scoreUser+=100  
-
-                }                
+                if (arrayTrivia[i].correct_answer === responseTrivia[i] ) {
+                scoreUser+=100 }                
                 
             }
             alert(`Tu puntaje es ${scoreUser}`)
