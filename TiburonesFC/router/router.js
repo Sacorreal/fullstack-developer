@@ -1,8 +1,7 @@
 const { Router} = require('express'); 
 const router = Router(); 
+const {obtenerJugador} = require('../controller/jugadores')
 
-router.get('/', (req, res)=>{
-    res.json({hola:"mundo"})
-})
+router.get('/', obtenerJugador)
 
 module.exports = router
